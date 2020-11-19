@@ -1,0 +1,55 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/Pies/ButterChickenIdle3.png" type="Texture" id=1]
+[ext_resource path="res://assets/Pies/MincePieIdle0.png" type="Texture" id=2]
+[ext_resource path="res://assets/Pies/MincePieIdle1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Pies/ButterChickenIdle2.png" type="Texture" id=4]
+[ext_resource path="res://assets/Pies/MincePieIdle2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Pies/MincePieIdle3.png" type="Texture" id=6]
+[ext_resource path="res://assets/Pies/SteacknCheeseIdle2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Pies/ButterChickenIdle1.png" type="Texture" id=8]
+[ext_resource path="res://assets/Pies/SteacknCheeseIdle0.png" type="Texture" id=9]
+[ext_resource path="res://assets/Pies/SteacknCheeseIdle3.png" type="Texture" id=10]
+[ext_resource path="res://assets/Pies/ButterChickenIdle0.png" type="Texture" id=11]
+[ext_resource path="res://assets/Pies/SteacknCheeseIdle1.png" type="Texture" id=12]
+[ext_resource path="res://items/Pie.gd" type="Script" id=13]
+[ext_resource path="res://assets/SoundEffects/piePickUp.wav" type="AudioStream" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "SteakNCheese",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "ButterChicken",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Mince",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[node name="Pie" type="Area2D"]
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "ButterChicken"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 2 )
+
+[node name="PieCollected" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
+volume_db = 10.0
+[connection signal="body_entered" from="." to="." method="_on_Pie_body_entered"]
+[connection signal="finished" from="PieCollected" to="." method="_on_PieCollected_finished"]

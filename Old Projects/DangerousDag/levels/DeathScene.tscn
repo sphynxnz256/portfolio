@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/TryAgain.gd" type="Script" id=1]
+[ext_resource path="res://ui/GiveUp.gd" type="Script" id=2]
+
+[node name="DeathScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 448.0
+margin_top = 224.0
+margin_right = 576.0
+margin_bottom = 256.0
+text = "You Drowned
+Try Again?"
+align = 1
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 544.0
+margin_top = 288.0
+margin_right = 640.0
+margin_bottom = 320.0
+text = "Quit"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TryAgain" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 288.0
+margin_right = 480.0
+margin_bottom = 320.0
+text = "Try Again"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+level_sceen = "res://levels/Level2.tscn"
