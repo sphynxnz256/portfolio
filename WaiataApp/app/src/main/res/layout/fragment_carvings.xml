@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--layout for CarvingsFragment-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".carvings.CarvingsFragment">
+
+        <!--Carving1-->
+        <ImageView
+            android:id="@+id/image_carving1"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/carving1_title"
+            android:onClick="loadCarving1"
+            android:src="@drawable/carving1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_carving1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="loadCarving1"
+            android:text="@string/carving1_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Carving2-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_carving2_Top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="96dp" />
+
+        <ImageView
+            android:id="@+id/image_carving2"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/carving2_title"
+            android:onClick="loadCarving2"
+            android:src="@drawable/carving2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_carving1" />
+
+        <TextView
+            android:id="@+id/text_carving2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="loadCarving2"
+            android:text="@string/carving2_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_carving2_Top" />
+
+        <!--Carving3-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_carving3_Top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="191dp" />
+
+        <ImageView
+            android:id="@+id/image_carving3"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/carving3_title"
+            android:onClick="loadCarving3"
+            android:src="@drawable/carving3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_carving2" />
+
+        <TextView
+            android:id="@+id/text_carving3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="loadCarving3"
+            android:text="@string/carving3_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_carving3_Top" />
+
+        <!--Carving4-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_carving4_Top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="287dp" />
+
+        <ImageView
+            android:id="@+id/image_carving4"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/carving4_title"
+            android:onClick="loadCarving4"
+            android:src="@drawable/carving4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_carving3" />
+
+        <TextView
+            android:id="@+id/text_carving4_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="loadCarving4"
+            android:text="@string/carving4_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_carving4_Top" />
+
+        <!--Carving5-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_carving5_Top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="383dp" />
+
+        <ImageView
+            android:id="@+id/image_carving5"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/carving5_title"
+            android:onClick="loadCarving5"
+            android:src="@drawable/carving5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_carving4" />
+
+        <TextView
+            android:id="@+id/text_carving5_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="loadCarving5"
+            android:text="@string/carving5_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_carving5_Top" />
+
+        <!--Carving6-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_carving6_Top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="480dp" />
+
+        <ImageView
+            android:id="@+id/image_carving6"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/carving6_title"
+            android:onClick="loadCarving5"
+            android:src="@drawable/carving6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_carving5" />
+
+        <TextView
+            android:id="@+id/text_carving6_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="loadCarving6"
+            android:text="@string/carving6_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_carving6_Top" />
+
+        <!--Carving7-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_carving7_Top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="576dp" />
+
+        <ImageView
+            android:id="@+id/image_carving7"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/carving7_title"
+            android:onClick="loadCarving7"
+            android:src="@drawable/carving7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_carving6" />
+
+        <TextView
+            android:id="@+id/text_carving7_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="loadCarving7"
+            android:text="@string/carving7_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_carving7_Top" />
+
+        <!--info link-->
+        <TextView
+            android:id="@+id/text_info_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/infoLink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_carving7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

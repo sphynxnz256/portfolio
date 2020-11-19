@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Gym App</string>
+
+    <!--strings for add workout activity-->
+    <string name="add_workout_name">Enter workout name (required)</string>
+    <string name="save_workout_button">save workout</string>
+
+    <!-- add new exercise strings -->
+    <string name="add_exercise_name">Enter exercise name (required)</string>
+    <string name="add_num_sets">Enter number of sets</string>
+    <string name="add_num_reps">Enter number of reps</string>
+    <string name="add_weight">Enter weight</string>
+    <string name="add_info_link">Enter info link</string>
+    <string name="add_video_link">Enter video link</string>
+    <string name="save_exercise_button">save exercise</string>
+
+    <!-- strings for main menu -->
+    <string name="delete_all_workouts">Delete all workouts</string>
+
+    <!-- strings for workout menu -->
+    <string name="delete_all_exercises">Delete all exercises</string>
+
+    <!-- strings for exercise activity -->
+    <string name="sets_text">Sets: </string>
+    <string name="reps_text">Reps: </string>
+    <string name="weight_text">Weight: </string>
+    <string name="info_link">Info web link:</string>
+    <string name="video_link">Video link:</string>
+    <string name="edit_exercise_button">edit exercise</string>
+
+    <!-- strings for start activity -->
+    <string name="workouts">Workouts</string>
+    <string name="user_guide">User Guide</string>
+
+    <!-- strings for user guide -->
+    <string name="title">User Guide</string>
+    <string name="body">To add a workout tap the \"+"\ button in the bottom right corner.\n\nTo view a workout tap the workout from the list.\n\nTo edit a workout tap and hold the workout from the list.\n\nTo add an exercise, once viewing a workout, tap the \"+\" button in the bottom right corner.\n\nTo view an exercise tap the workout from the list.\n\nTo edit an exercise tap and hold the exercise from the list or within the exercise click the edit exercise button.\n\nTo delete a single workout or exercise swipe it left or right from the list.\n\nTo delete all workouts or exercises click the top right hand menu and select delete all</string>
+
+</resources>
+
+

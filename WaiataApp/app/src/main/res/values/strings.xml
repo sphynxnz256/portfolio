@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Waiata App</string>
+
+    <!--strings for carvings fragment-->
+    <!--carving1-->
+    <string name="carving1_title">Waka Maumahara</string>
+    <string name="carving1_body">On the marae ātea (courtyard) is 7.5 metre pou (pillar) in the form of a waka (canoe).\nThis is the waka maumahara (memorial pillar) which faces Taupiri mountain. At the top of the waka maumahara stands the native kaahu (hawk) representing the Māori Queen Dame Te Atarirangikaahu.</string>
+    <!--carving2-->
+    <string name="carving2_title">Pou Whakarae</string>
+    <string name="carving2_body">Near the waka maumahara (memorial pillar ) are seven smaller pou whakarae(pillars) which symbolise the star cluster Matariki (Pleides). This star cluster is significant to Māori and Tainui culture.</string>
+    <!--carving3-->
+    <string name="carving3_title">Pou-tūā-rangi</string>
+    <string name="carving3_body">The pou-tūā-rangi (internal wharenui post) near the entrance represents Wintec values.\nIt has been carved in totara from a tree which used to stand on Wintec city campus. Behind the pou-tua-rangi is a tukutuku panel from the original Wintec wharenui, Te Kākano a te Kaahu.</string>
+    <!--carving4-->
+    <string name="carving4_title">Pou-tūā-rongo-Tawhaki</string>
+    <string name="carving4_body">Located on the back wall of the wharenui the pou-tūā-rongo is a carving of Tawhaki who received the baskets of knowledge (nga kete wananga).\nTawhaki is featured looking towards the doorway and the world of light. This was also carved in totara from a tree which use to stand on Wintec’s city campus.</string>
+    <!--carving5-->
+    <string name="carving5_title">Tomokanga</string>
+    <string name="carving5_body">The entrance designs welcome people from around the world of Wintec.\nThe sub-tribes (hapū) of this area are shown welcoming visitors onto the marae in a central carving at the entrance.\nMātauranga Māori and part of the creation story of Tainui are also represented in the carvings.</string>
+    <!--carving6-->
+    <string name="carving6_title">Pare and Whakawae</string>
+    <string name="carving6_body">Above the wharenui pare (doorway) are three figures nga kete wānanga representing the three baskets of knowledge. Part of the creation story of Tainui is also told in the designs.\nManaia and takarangi patterns symbolise growth and development. The textured ngao matariki pattern on the sides of the doorway (whakawae) represents the welcoming of the cultures and peoples of the world.</string>
+    <!--carving7-->
+    <string name="carving7_title">Kōrupe</string>
+    <string name="carving7_body">The taniwha Tuheitia is carved on the window lintel (kōrupe) above the front window of Te Kākano a te Kaahu, along with ngao matariki and manaia designs.\nTuheitia holds guardianship of the Waipa river and was regarded with awe and respect.</string>
+    <!--info link-->
+    <string name="infoLink"><a href="https://www.wintec.ac.nz/about-wintec/m%C4%81ori-and-pasifika/wintec-marae/marae-carvings">Click for more info</a></string>
+
+    <!--splash screen-->
+    <string name="wintec_waiata">Wintec Waiata</string>
+    <string name="wintec_logo">Wintec logo</string>
+
+    <!--home fragment-->
+    <string name="link_to_songs_placeholder">Link to songs (placeholder)</string>
+    <string name="link_to_marae_info_placeholder">Link to marae info (placeholder)</string>
+    <string name="link_to_carvings_info_placeholder">Link to carvings info (placeholder)</string>
+    <string name="link_to_about_us_placeholder">Link to about us (placeholder)</string>
+
+    <!--marae fragment-->
+    <string name="info"><a href="https://www.wintec.ac.nz/about-wintec/m%C4%81ori-and-pasifika/wintec-marae">More info</a></string>
+    <string name="wintec_marae">Wintec Marae</string>
+    <string name="wintec_marae_image">wintec marae</string>
+    <string name="wintec_marae_body">Kia ora and welcome to Wintec Marae, Te Kōpū Mānia o Kirikiriroa.\n\nThe marae complex takes its name from an area famous for its rich, fertile lands and gardens that linked the network of Waikato sub tribes (hapū) who lived along the banks of the Waikato River.\n\nThe design of our marae is a contemporary version of traditional aspects with an emphasis on matauranga Māori (learning) and tikanga (customs and traditions). Our marae is multipurpose, where students and staff can conduct and experience teaching, learning and pastoral support in a uniquely Māori environment.</string>
+
+    <!--about us fragment-->
+    <string name="team_title">Our Team:</string>
+    <string name="team_names">Aaron Froggatt\nAlex Webber\nAnthoy Warrington\nJimmy Caunter\nBill Liu\nJake Righer\nKieran Cave</string>
+    <string name="credits_title">Credits:</string>
+    <string name="credits_body">Credit for images used in carvings and marae sections and the wintec belong to Wintec Marae website found at</string>
+    <string name="credits_link"><a href = "https://www.wintec.ac.nz/about-wintec/m%C4%81ori-and-pasifika/wintec-marae">Wintec Marae.</a></string>
+    <string name="credit_body2">Credit for the videos goes to Jon, Toni, Stevie, James and Elysia, developers of last semesters Waiata App.</string>
+    <string name="disclaimer_title">Disclaimer:</string>
+    <string name="discaimer_body">The Waiata App is a Prototype version for Wintec Staff and Students. It is intended that staff and students shall use this to get an understanding of singing Wintec Waiata and information related to the Wintec Marae. Waiata or Information on the Marae may change change accordingly making older versions redundant – Wintec takes no responsibility of outdated information displayed on the app.</string>
+
+
+    <!--bottom navigation bar-->
+    <string name="nav_home">Home</string>
+    <string name="nav_songs">Songs</string>
+    <string name="nav_about_us">About Us</string>
+
+    <!--waiataPage-->
+    <string name="string">\?</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="diff_help">Easy difficulty comes with a councing ball to help the user sing along in time with the song.\nMedium removes the bouncing ball, but still shows the lyrics at the bottom.\nHard takes away the lyrics as well.</string>
+    <string name="lyrics_placeholder">Lyrics\n \n \n \n \n \n \n end</string>
+    <string name="change_language">Change Language</string>
+    <string name="current_diff">Easy</string>
+    <string name="easier_button_text">Easier</string>
+    <string name="harder_button_text">Harder</string>
+
+
+</resources>

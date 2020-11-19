@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/wintec_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/wintec_logo"
+        android:src="@drawable/wintec" />
+
+    <TextView
+        android:onClick="loadFragment"
+        android:id="@+id/songs_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wintec_logo"
+        android:text="@string/link_to_songs_placeholder" />
+
+    <TextView
+        android:onClick="loadFragment"
+        android:id="@+id/marae_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songs_placeholder"
+        android:text="@string/link_to_marae_info_placeholder" />
+
+    <TextView
+        android:onClick="loadFragment"
+        android:id="@+id/carvings_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/marae_placeholder"
+        android:text="@string/link_to_carvings_info_placeholder" />
+
+    <TextView
+        android:onClick="loadFragment"
+        android:id="@+id/about_us_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carvings_placeholder"
+        android:text="@string/link_to_about_us_placeholder" />
+
+</RelativeLayout>

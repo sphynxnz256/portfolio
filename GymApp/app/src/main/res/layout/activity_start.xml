@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="96dp"
+    tools:context=".StartActivity">
+
+    <ImageView
+        android:id="@+id/image_view_workouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startWorkouts"
+        android:src="@drawable/ic_workout_big"
+        app:layout_constraintBottom_toTopOf="@+id/image_view_user_guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_workouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startWorkouts"
+        android:text="@string/workouts"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_workouts" />
+
+    <ImageView
+        android:id="@+id/image_view_user_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startUserGuide"
+        android:src="@drawable/ic_user_guide_big"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_workouts" />
+
+    <TextView
+        android:id="@+id/text_view_user_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startUserGuide"
+        android:text="@string/user_guide"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_user_guide" />
+</androidx.constraintlayout.widget.ConstraintLayout>
