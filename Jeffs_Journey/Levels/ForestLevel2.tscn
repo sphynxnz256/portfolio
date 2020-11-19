@@ -1,0 +1,967 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/ForrestBush.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/outofboundsForest.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/Hedge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Rock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/DoorwayHedge.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Lever.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Items/Herb.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TileSets/RandomTiles.tres" type="TileSet" id=11]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Levels/ForestLevel2.gd" type="Script" id=13]
+[ext_resource path="res://Enemies/Ghost.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/tilesets/grassbg.png" type="Texture" id=15]
+[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=16]
+
+[node name="ForestLevel2" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="BG" type="Sprite" parent="Background"]
+position = Vector2( 171.106, 139.774 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG2" type="Sprite" parent="Background"]
+position = Vector2( 514.76, 140.482 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG3" type="Sprite" parent="Background"]
+position = Vector2( 855.258, 140.482 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG13" type="Sprite" parent="Background"]
+position = Vector2( 172.693, 481.827 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG14" type="Sprite" parent="Background"]
+position = Vector2( 516.347, 481.535 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG15" type="Sprite" parent="Background"]
+position = Vector2( 856.845, 481.535 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG4" type="Sprite" parent="Background"]
+position = Vector2( 172.694, -202.31 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG5" type="Sprite" parent="Background"]
+position = Vector2( 515.753, -201.603 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG6" type="Sprite" parent="Background"]
+position = Vector2( 856.845, -201.603 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG7" type="Sprite" parent="Background"]
+position = Vector2( 173.017, -543.765 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG8" type="Sprite" parent="Background"]
+position = Vector2( 516.671, -543.058 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG9" type="Sprite" parent="Background"]
+position = Vector2( 857.169, -543.058 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG10" type="Sprite" parent="Background"]
+position = Vector2( 173.017, -885.448 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG11" type="Sprite" parent="Background"]
+position = Vector2( 516.671, -884.74 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="BG12" type="Sprite" parent="Background"]
+position = Vector2( 857.169, -884.74 )
+scale = Vector2( 0.343805, 0.343805 )
+texture = ExtResource( 15 )
+
+[node name="ExtraObjects" type="TileMap" parent="."]
+position = Vector2( 631.61, -863.454 )
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -12, 24, 0, 65530, 24, 0, 4, 24, 0, 65536, 22, 0, 196599, 22, 0, 262145, 22, 0, 393211, 24, 0, 327682, 24, 0, 524276, 22, 0, 524289, 24, 0, 655360, 24, 0, 786427, 24, 0, 786437, 24, 0, 983035, 22, 0, 917508, 22, 0, 1048570, 24, 0, 983042, 24, 0, 1114100, 24, 0, 1114110, 24, 0, 1048577, 24, 0, 1245179, 22, 0, 1310719, 22, 0, 1245188, 24, 0, 1310725, 11, 0, 1441786, 24, 0, 1441790, 22, 0, 1376258, 22, 0, 1376261, 12, 0, 1507317, 9, 0, 1507318, 10, 0, 1638386, 24, 0, 1638393, 22, 0, 1572865, 22, 0, 1572868, 24, 0, 1834999, 24, 0, 1966069, 24, 0, 2162674, 17, 0, 2228210, 16, 0, 2293749, 24, 0, 2293759, 24, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 492.786, 316.087 )
+current = true
+smoothing_enabled = true
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 492.786, 309.633 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+position = Vector2( 0, 6.45499 )
+remote_path = NodePath("../../../Camera2D")
+
+[node name="ForestBush" type="YSort" parent="YSort"]
+
+[node name="Forestbush" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 111.555, 250.866 )
+
+[node name="Forestbush2" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 117.053, 148.48 )
+
+[node name="Forestbush3" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 121.137, 46.5558 )
+
+[node name="Forestbush4" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 122.471, -51.2988 )
+
+[node name="Forestbush5" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 126.555, -149.074 )
+
+[node name="Forestbush6" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 127.97, -256.555 )
+
+[node name="Forestbush7" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 130.798, -361.206 )
+
+[node name="Forestbush8" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 132.212, -467.272 )
+
+[node name="Forestbush9" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 136.455, -570.51 )
+
+[node name="Forestbush10" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 139.283, -670.919 )
+
+[node name="Forestbush11" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 143.526, -772.743 )
+
+[node name="Forestbush51" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 145.6, -871.523 )
+
+[node name="Forestbush52" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 56.7615, -910.898 )
+
+[node name="Forestbush53" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 156.48, -965.342 )
+
+[node name="Forestbush65" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 68.1857, -998.137 )
+
+[node name="Forestbush54" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 177.929, -1015.64 )
+
+[node name="Forestbush55" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 274.374, -1015.3 )
+
+[node name="Forestbush56" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 364.754, -1016.48 )
+
+[node name="Forestbush57" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 464.647, -1016.48 )
+
+[node name="Forestbush58" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 560.973, -1015.3 )
+
+[node name="Forestbush59" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 659.677, -1015.3 )
+
+[node name="Forestbush60" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 766.706, -1010.54 )
+
+[node name="Forestbush61" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 872.545, -914.213 )
+
+[node name="Forestbush62" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 977.195, -933.24 )
+
+[node name="Forestbush63" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 980.763, -1017.67 )
+
+[node name="Forestbush64" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 860.653, -1010.54 )
+
+[node name="Forestbush12" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 35.9952, -511.817 )
+
+[node name="Forestbush13" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 40.2379, -615.055 )
+
+[node name="Forestbush14" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 43.0663, -715.464 )
+
+[node name="Forestbush15" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 47.309, -817.288 )
+
+[node name="Forestbush16" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 27.0862, -112.695 )
+
+[node name="Forestbush17" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 31.3289, -215.932 )
+
+[node name="Forestbush18" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 34.1573, -316.341 )
+
+[node name="Forestbush19" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 38.4, -418.165 )
+
+[node name="Forestbush20" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 14.6136, 289.992 )
+
+[node name="Forestbush66" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 124.021, 357.777 )
+
+[node name="Forestbush67" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 247.698, 357.777 )
+
+[node name="Forestbush68" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 368.997, 361.344 )
+
+[node name="Forestbush70" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 616.352, 361.344 )
+
+[node name="Forestbush71" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 736.462, 360.155 )
+
+[node name="Forestbush72" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 857.761, 355.398 )
+
+[node name="Forestbush21" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 18.8563, 186.754 )
+
+[node name="Forestbush22" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 21.6848, 86.345 )
+
+[node name="Forestbush23" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 25.9274, -15.4788 )
+
+[node name="Forestbush24" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 966.817, 218.793 )
+
+[node name="Forestbush46" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 970.381, 320.356 )
+
+[node name="Forestbush25" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 972.315, 116.408 )
+
+[node name="Forestbush26" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 976.399, 14.4835 )
+
+[node name="Forestbush27" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 977.734, -83.3712 )
+
+[node name="Forestbush28" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 869.876, 257.919 )
+
+[node name="Forestbush47" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 777.223, 195.556 )
+
+[node name="Forestbush48" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 707.709, 151.446 )
+
+[node name="Forestbush49" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 637.056, 134.284 )
+
+[node name="Forestbush50" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 565.509, 123.587 )
+
+[node name="Forestbush29" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 874.119, 154.682 )
+
+[node name="Forestbush30" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 876.947, 54.2726 )
+
+[node name="Forestbush31" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 881.19, -47.5511 )
+
+[node name="Forestbush32" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 975.952, -176.025 )
+
+[node name="Forestbush33" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 879.408, -140.205 )
+
+[node name="Forestbush34" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 972.389, -266.896 )
+
+[node name="Forestbush35" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 875.845, -231.076 )
+
+[node name="Forestbush36" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 970.607, -377.368 )
+
+[node name="Forestbush37" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 874.063, -341.548 )
+
+[node name="Forestbush38" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 975.952, -489.621 )
+
+[node name="Forestbush39" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 879.408, -453.801 )
+
+[node name="Forestbush40" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 970.607, -601.874 )
+
+[node name="Forestbush41" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 871.39, -592.781 )
+
+[node name="Forestbush42" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 969.813, -727.394 )
+
+[node name="Forestbush43" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 874.063, -690.78 )
+
+[node name="Forestbush44" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 967.043, -837.071 )
+
+[node name="Forestbush45" parent="YSort/ForestBush" instance=ExtResource( 2 )]
+position = Vector2( 870.499, -801.251 )
+
+[node name="Trees" type="YSort" parent="YSort"]
+
+[node name="Tree13" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 737.366, -209.324 )
+
+[node name="Tree14" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 774.534, 1.61485 )
+
+[node name="Tree15" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 350.508, -233.314 )
+
+[node name="Tree16" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 223.117, -235.657 )
+
+[node name="Tree17" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 775.88, -126.529 )
+
+[node name="Tree18" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 286.096, -234.358 )
+
+[node name="Tree19" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 232.302, 83.6211 )
+
+[node name="Tree20" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 338.614, 283.402 )
+
+[node name="Tree21" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 423.363, 32.5093 )
+
+[node name="Tree22" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 304.381, 32.5093 )
+
+[node name="Tree23" parent="YSort/Trees" instance=ExtResource( 5 )]
+position = Vector2( 243.67, 237.053 )
+
+[node name="Hedge" type="YSort" parent="YSort"]
+
+[node name="Hedge" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 810.767, -287.776 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge2" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 763.945, -287.331 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge3" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 719.35, -286.143 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge4" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 675.199, -286.735 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge5" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 629.863, -286.29 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge6" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 585.416, -285.547 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge7" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 539.485, -286.139 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge112" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 586.9, -41.3033 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge122" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 584.409, -111.065 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge123" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 540.039, -110.471 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge124" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 495.331, -111.66 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge125" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 450.96, -111.322 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge126" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 406.365, -109.2 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge127" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 363.297, -108.381 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge128" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 318.589, -109.458 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge129" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 273.881, -110.309 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge130" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 230.475, -114.841 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge131" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 207.8, -152.671 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge113" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 542.305, -40.1141 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge114" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 497.709, -38.9249 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge115" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 452.52, -38.3303 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge116" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 407.924, -38.9249 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge117" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 362.14, -40.1141 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge118" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 317.545, -39.5195 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge119" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 271.76, -40.1141 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge120" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 228.354, -39.5195 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge121" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 191.489, -15.7354 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge8" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 446.275, -291.335 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge53" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 445.531, -335.632 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge60" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 445.384, -379.633 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge61" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 399.005, -380.822 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge62" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 395.438, -422.444 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge65" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 395.438, -465.256 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge66" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 311.897, -463.174 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge79" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 312.345, -506.878 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge80" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 311.602, -550.137 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge81" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 312.345, -593.842 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge82" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 265.967, -593.69 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge67" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 443.006, -549.095 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge83" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 398.411, -548.5 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge68" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 487.601, -551.473 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge69" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 488.79, -507.176 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge70" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 486.412, -463.472 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge71" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 532.791, -462.283 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge72" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 576.197, -459.904 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge73" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 621.387, -459.31 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge74" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 664.793, -458.121 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge75" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 711.172, -459.758 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge76" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 713.094, -503.907 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge77" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 713.986, -547.611 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge84" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 756.797, -640.219 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge85" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 710.366, -640.069 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge86" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 631.184, -638.141 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge87" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 584.508, -636.952 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge91" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 490.318, -643.78 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge92" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 444.089, -642.593 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge93" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 397.712, -642.593 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge95" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 359.762, -678.719 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge96" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 312.788, -679.908 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge97" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 312.193, -723.909 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge98" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 312.048, -767.317 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge99" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 411.622, -863.474 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge132" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 412.067, -819.374 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge133" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 412.067, -776.166 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge100" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 311.248, -810.711 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge101" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 537.091, -644.36 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge102" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 492.786, -771.773 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge103" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 538.568, -772.216 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge104" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 584.205, -769.245 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge105" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 630.621, -770.73 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge110" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 675.813, -771.176 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge108" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 584.805, -681.099 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge109" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 584.653, -724.948 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge106" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 583.504, -857.381 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge107" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 584.991, -813.228 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge88" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 581.987, -593.547 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge89" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 581.839, -551.181 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge90" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 627.92, -550.883 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge78" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 759.474, -549.841 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge63" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 353.221, -380.822 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge64" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 306.842, -379.633 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge54" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 541.265, -329.989 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge55" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 541.708, -374.136 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge56" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 586.898, -372.949 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge57" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 631.938, -372.058 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge58" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 676.83, -371.909 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge59" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 722.463, -371.761 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge9" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 400.789, -291.037 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge10" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 356.194, -290.442 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge11" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 312.193, -290.442 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge12" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 268.193, -289.253 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge13" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 221.815, -289.253 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge40" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 456.97, -906.433 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge41" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 409.998, -906.876 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge42" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 363.029, -907.619 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge43" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 316.948, -908.213 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge44" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 270.126, -909.106 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge45" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 224.498, -895.303 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge46" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 735.831, -905.393 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge52" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 781.911, -901.974 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge47" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 690.046, -906.581 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge48" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 644.411, -907.62 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge49" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 597.44, -907.769 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge50" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 550.023, -907.769 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge51" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 503.051, -907.474 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge14" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 219.735, -333.55 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge15" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 220.479, -376.361 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge16" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 220.183, -419.322 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge17" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 220.183, -462.728 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge18" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 220.924, -505.542 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge19" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 220.628, -548.948 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge20" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 220.924, -593.69 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge21" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 221.222, -637.096 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge22" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 220.481, -679.609 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge23" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 219.59, -721.976 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge24" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 222.118, -765.827 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge25" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 221.97, -809.084 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge26" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 222.418, -853.232 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge27" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 807.343, -331.773 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge28" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 806.002, -375.327 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge29" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 805.854, -419.856 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge30" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 805.999, -464.066 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge31" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 805.704, -507.771 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge32" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 805.433, -551.515 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge33" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 804.338, -595.22 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge34" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 803.027, -638.289 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge35" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 800.058, -682.584 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge36" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 800.058, -726.732 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge37" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 802.586, -770.584 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge38" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 803.775, -814.286 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Hedge39" parent="YSort/Hedge" instance=ExtResource( 6 )]
+position = Vector2( 804.67, -858.434 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="DoorwayHedge" parent="YSort/Hedge" instance=ExtResource( 8 )]
+position = Vector2( 671.044, -632.718 )
+
+[node name="Rocks" type="YSort" parent="YSort"]
+
+[node name="Rock" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 788.788, 46.9096 )
+
+[node name="Rock2" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 203.788, 122.91 )
+
+[node name="Rock3" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 221.788, 133.41 )
+
+[node name="Rock4" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 235.288, 116.41 )
+
+[node name="Rock5" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 198.808, 263.452 )
+
+[node name="Rock6" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 244.829, -201.247 )
+
+[node name="Rock7" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 441.26, -252.88 )
+
+[node name="Rock8" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 403.657, -230.992 )
+
+[node name="Rock9" parent="YSort/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 394.677, -333.698 )
+
+[node name="Lever" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 539.725, -816.685 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Herb" parent="." instance=ExtResource( 10 )]
+position = Vector2( 737.73, -769.348 )
+
+[node name="Portal" parent="." instance=ExtResource( 12 )]
+visible = false
+position = Vector2( 615.659, -875.607 )
+level_sceen = "res://Levels/BedChamber.tscn"
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="outofboundsForest" parent="." instance=ExtResource( 4 )]
+position = Vector2( 502.27, 348.498 )
+
+[node name="Bat" parent="." instance=ExtResource( 16 )]
+position = Vector2( 577.379, 222.26 )
+
+[node name="Bat2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 554.071, -220.962 )
+
+[node name="Ghost" parent="." instance=ExtResource( 14 )]
+position = Vector2( 215.043, -67.3403 )
+
+[node name="Ghost2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 269.075, -856.886 )
+
+[node name="Ghost3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 764.904, -407.234 )
+
+[node name="Ghost4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 268.016, -539.667 )
+
+[node name="Ghost5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 674.85, -584.728 )
+[connection signal="herb_collected" from="Herb" to="HUD" method="_on_Herb1_herb_collected"]
+[connection signal="herb_collected" from="Herb" to="Portal" method="_on_Herb1_herb_collected"]

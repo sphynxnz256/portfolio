@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tower-of-despair_loop.ogg-c8822bfafa368d8068fda61d11d2c803.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/Tower-of-despair_loop.ogg"
+dest_files=[ "res://.import/Tower-of-despair_loop.ogg-c8822bfafa368d8068fda61d11d2c803.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

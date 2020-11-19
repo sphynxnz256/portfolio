@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Labyrinth-Of-Time_loop.ogg-b29701fae2d207f1aa1c04a50b426267.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/Labyrinth-Of-Time_loop.ogg"
+dest_files=[ "res://.import/Labyrinth-Of-Time_loop.ogg-b29701fae2d207f1aa1c04a50b426267.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

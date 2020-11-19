@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/herbget.wav-22730cbc463917d82eb0f2700ef4e1fa.sample"
+
+[deps]
+
+source_file="res://assets/sound/herbget.wav"
+dest_files=[ "res://.import/herbget.wav-22730cbc463917d82eb0f2700ef4e1fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

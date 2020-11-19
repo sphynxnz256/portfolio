@@ -1,0 +1,332 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://TileSets/PathTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://TileSets/WaterTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://TileSets/RandomTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/ToPreviousLevel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/Herb.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Levels/LakeLevel2.gd" type="Script" id=8]
+[ext_resource path="res://Items/MovableRock.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/tilesets/SampleMap/[Base]BaseChip_pipo.png" type="Texture" id=10]
+[ext_resource path="res://Levels/WaterNoRock.gd" type="Script" id=11]
+[ext_resource path="res://assets/tilesets/[Base]BaseChip_pipo.png" type="Texture" id=12]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Levels/puzzleHint.gd" type="Script" id=14]
+[ext_resource path="res://assets/tilesets/[A]_type3/[A]Water2_pipo.png" type="Texture" id=15]
+[ext_resource path="res://Enemies/Devilb.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Enemies/Monster.tscn" type="PackedScene" id=17]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+#shows the rock in water if it gets a signal to be shown
+func _on_WaterNoRock_showWaterRock1():
+	if name == \"WaterRock1\":
+		visible = true
+
+func _on_WaterNoRock_showWaterRock2():
+	if name == \"WaterRock2\":
+		visible = true
+
+func _on_WaterNoRock_showWaterRock3():
+	if name == \"WaterRock3\":
+		visible = true
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 16, 19.5001 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 99.7303, 10 )
+
+[node name="LakeLevel2" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="TileMaps" type="Node2D" parent="."]
+
+[node name="PathTiles" type="TileMap" parent="TileMaps"]
+show_behind_parent = true
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 47, 0, 1, 47, 0, 2, 47, 0, 3, 47, 0, 4, 47, 0, 5, 47, 0, 6, 47, 0, 7, 47, 0, 8, 47, 0, 9, 47, 0, 10, 47, 0, 11, 47, 0, 12, 47, 0, 13, 47, 0, 14, 47, 0, 15, 47, 0, 16, 47, 0, 17, 47, 0, 18, 47, 0, 19, 47, 0, 20, 47, 0, 21, 47, 0, 22, 47, 0, 23, 47, 0, 24, 47, 0, 25, 47, 0, 26, 47, 0, 27, 47, 0, 28, 47, 0, 29, 47, 0, 65536, 47, 0, 65537, 47, 0, 65538, 47, 0, 65539, 47, 0, 65540, 47, 0, 65541, 47, 0, 65542, 47, 0, 65543, 47, 0, 65544, 47, 0, 65545, 47, 0, 65546, 47, 0, 65547, 47, 0, 65548, 47, 0, 65549, 47, 0, 65550, 47, 0, 65551, 47, 0, 65552, 47, 0, 65553, 47, 0, 65554, 47, 0, 65555, 47, 0, 65556, 47, 0, 65557, 47, 0, 65558, 47, 0, 65559, 47, 0, 65560, 47, 0, 65561, 47, 0, 65562, 47, 0, 65563, 47, 0, 65564, 47, 0, 65565, 47, 0, 131072, 47, 0, 131073, 47, 0, 131074, 47, 0, 131075, 47, 0, 131076, 47, 0, 131077, 47, 0, 131078, 47, 0, 131079, 47, 0, 131080, 47, 0, 131081, 47, 0, 131082, 47, 0, 131083, 47, 0, 131084, 47, 0, 131085, 47, 0, 131086, 47, 0, 131087, 47, 0, 131088, 47, 0, 131089, 47, 0, 131090, 47, 0, 131091, 47, 0, 131092, 47, 0, 131093, 47, 0, 131094, 47, 0, 131095, 47, 0, 131096, 47, 0, 131097, 47, 0, 131098, 47, 0, 131099, 47, 0, 131100, 47, 0, 131101, 47, 0, 196608, 47, 0, 196609, 47, 0, 196610, 47, 0, 196611, 47, 0, 196612, 47, 0, 196613, 47, 0, 196614, 47, 0, 196615, 47, 0, 196616, 47, 0, 196617, 47, 0, 196618, 47, 0, 196619, 47, 0, 196620, 47, 0, 196621, 47, 0, 196622, 47, 0, 196623, 47, 0, 196624, 47, 0, 196625, 47, 0, 196626, 47, 0, 196627, 47, 0, 196628, 47, 0, 196629, 47, 0, 196630, 47, 0, 196631, 47, 0, 196632, 47, 0, 196633, 47, 0, 196634, 47, 0, 196635, 47, 0, 196636, 47, 0, 196637, 47, 0, 262144, 47, 0, 262145, 47, 0, 262146, 47, 0, 262147, 47, 0, 262148, 47, 0, 262149, 47, 0, 262150, 47, 0, 262151, 47, 0, 262152, 47, 0, 262153, 47, 0, 262154, 47, 0, 262155, 47, 0, 262156, 47, 0, 262157, 47, 0, 262158, 47, 0, 262159, 47, 0, 262160, 47, 0, 262161, 47, 0, 262162, 47, 0, 262163, 47, 0, 262164, 47, 0, 262165, 47, 0, 262166, 47, 0, 262167, 47, 0, 262168, 47, 0, 262169, 47, 0, 262170, 47, 0, 262171, 47, 0, 262172, 47, 0, 262173, 47, 0, 327680, 47, 0, 327681, 47, 0, 327682, 47, 0, 327683, 47, 0, 327684, 47, 0, 327685, 47, 0, 327686, 47, 0, 327687, 47, 0, 327688, 47, 0, 327689, 47, 0, 327690, 47, 0, 327691, 47, 0, 327692, 47, 0, 327693, 47, 0, 327694, 47, 0, 327695, 47, 0, 327696, 47, 0, 327697, 47, 0, 327698, 47, 0, 327699, 47, 0, 327700, 47, 0, 327701, 47, 0, 327702, 47, 0, 327703, 47, 0, 327704, 47, 0, 327705, 47, 0, 327706, 47, 0, 327707, 47, 0, 327708, 47, 0, 327709, 47, 0, 393216, 47, 0, 393217, 47, 0, 393218, 47, 0, 393219, 47, 0, 393220, 47, 0, 393221, 47, 0, 393222, 47, 0, 393223, 47, 0, 393224, 47, 0, 393225, 47, 0, 393226, 47, 0, 393227, 47, 0, 393228, 47, 0, 393229, 47, 0, 393230, 47, 0, 393231, 47, 0, 393232, 47, 0, 393233, 47, 0, 393234, 47, 0, 393235, 47, 0, 393236, 47, 0, 393237, 47, 0, 393238, 47, 0, 393239, 47, 0, 393240, 47, 0, 393241, 47, 0, 393242, 47, 0, 393243, 47, 0, 393244, 47, 0, 393245, 47, 0, 458752, 47, 0, 458753, 47, 0, 458754, 47, 0, 458755, 47, 0, 458756, 47, 0, 458757, 47, 0, 458758, 47, 0, 458759, 47, 0, 458760, 47, 0, 458761, 47, 0, 458762, 47, 0, 458763, 47, 0, 458764, 47, 0, 458765, 47, 0, 458766, 47, 0, 458767, 47, 0, 458768, 47, 0, 458769, 47, 0, 458770, 47, 0, 458771, 47, 0, 458772, 47, 0, 458773, 47, 0, 458774, 47, 0, 458775, 47, 0, 458776, 47, 0, 458777, 47, 0, 458778, 47, 0, 458779, 47, 0, 458780, 47, 0, 458781, 47, 0, 524288, 47, 0, 524289, 47, 0, 524290, 47, 0, 524291, 47, 0, 524292, 47, 0, 524293, 47, 0, 524294, 47, 0, 524295, 47, 0, 524296, 47, 0, 524297, 47, 0, 524298, 47, 0, 524299, 47, 0, 524300, 47, 0, 524301, 47, 0, 524302, 47, 0, 524303, 47, 0, 524304, 47, 0, 524305, 47, 0, 524306, 47, 0, 524307, 47, 0, 524308, 47, 0, 524309, 47, 0, 524310, 47, 0, 524311, 47, 0, 524312, 47, 0, 524313, 47, 0, 524314, 47, 0, 524315, 47, 0, 524316, 47, 0, 524317, 47, 0, 589824, 47, 0, 589825, 47, 0, 589826, 47, 0, 589827, 47, 0, 589828, 47, 0, 589829, 47, 0, 589830, 47, 0, 589831, 47, 0, 589832, 47, 0, 589833, 47, 0, 589834, 47, 0, 589835, 47, 0, 589836, 47, 0, 589837, 47, 0, 589838, 47, 0, 589839, 47, 0, 589840, 47, 0, 589841, 47, 0, 589842, 47, 0, 589843, 47, 0, 589844, 47, 0, 589845, 47, 0, 589846, 47, 0, 589847, 47, 0, 589848, 47, 0, 589849, 47, 0, 589850, 47, 0, 589851, 47, 0, 589852, 47, 0, 589853, 47, 0, 655360, 47, 0, 655361, 47, 0, 655362, 47, 0, 655363, 47, 0, 655364, 5, 0, 655365, 7, 0, 655366, 47, 0, 655367, 47, 0, 655368, 47, 0, 655369, 47, 0, 655370, 47, 0, 655371, 47, 0, 655372, 47, 0, 655373, 47, 0, 655374, 47, 0, 655375, 47, 0, 655376, 47, 0, 655377, 47, 0, 655378, 47, 0, 655379, 47, 0, 655380, 47, 0, 655381, 47, 0, 655382, 47, 0, 655383, 47, 0, 655384, 47, 0, 655385, 47, 0, 655386, 47, 0, 655387, 47, 0, 655388, 47, 0, 655389, 47, 0, 720896, 47, 0, 720897, 47, 0, 720898, 47, 0, 720899, 47, 0, 720900, 13, 0, 720901, 15, 0, 720902, 47, 0, 720903, 47, 0, 720904, 47, 0, 720905, 47, 0, 720906, 47, 0, 720907, 47, 0, 720908, 47, 0, 720909, 47, 0, 720910, 47, 0, 720911, 47, 0, 720912, 47, 0, 720913, 47, 0, 720914, 47, 0, 720915, 47, 0, 720916, 47, 0, 720917, 47, 0, 720918, 47, 0, 720919, 47, 0, 720920, 47, 0, 720921, 47, 0, 720922, 47, 0, 720923, 47, 0, 720924, 47, 0, 720925, 47, 0, 786432, 47, 0, 786433, 47, 0, 786434, 47, 0, 786435, 47, 0, 786436, 13, 0, 786437, 15, 0, 786438, 47, 0, 786439, 47, 0, 786440, 47, 0, 786441, 47, 0, 786442, 47, 0, 786443, 47, 0, 786444, 47, 0, 786445, 47, 0, 786446, 47, 0, 786447, 47, 0, 786448, 47, 0, 786449, 47, 0, 786450, 47, 0, 786451, 47, 0, 786452, 47, 0, 786453, 47, 0, 786454, 47, 0, 786455, 47, 0, 786456, 47, 0, 786457, 47, 0, 786458, 47, 0, 786459, 47, 0, 786460, 47, 0, 786461, 47, 0, 851968, 47, 0, 851969, 47, 0, 851970, 47, 0, 851971, 47, 0, 851972, 21, 0, 851973, 36, 0, 851974, 7, 0, 851975, 47, 0, 851976, 47, 0, 851977, 47, 0, 851978, 47, 0, 851979, 47, 0, 851980, 47, 0, 851981, 47, 0, 851982, 47, 0, 851983, 47, 0, 851984, 47, 0, 851985, 47, 0, 851986, 47, 0, 851987, 47, 0, 851988, 47, 0, 851989, 47, 0, 851990, 47, 0, 851991, 47, 0, 851992, 47, 0, 851993, 47, 0, 851994, 47, 0, 851995, 47, 0, 851996, 47, 0, 851997, 47, 0, 917504, 47, 0, 917505, 47, 0, 917506, 47, 0, 917507, 47, 0, 917508, 47, 0, 917509, 21, 0, 917510, 44, 0, 917511, 7, 0, 917512, 47, 0, 917513, 47, 0, 917514, 47, 0, 917515, 47, 0, 917516, 47, 0, 917517, 47, 0, 917518, 47, 0, 917519, 47, 0, 917520, 47, 0, 917521, 47, 0, 917522, 47, 0, 917523, 47, 0, 917524, 47, 0, 917525, 47, 0, 917526, 47, 0, 917527, 47, 0, 917528, 47, 0, 917529, 47, 0, 917530, 47, 0, 917531, 47, 0, 917532, 47, 0, 917533, 47, 0, 983040, 47, 0, 983041, 47, 0, 983042, 47, 0, 983043, 47, 0, 983044, 47, 0, 983045, 47, 0, 983046, 21, 0, 983047, 44, 0, 983048, 6, 0, 983049, 7, 0, 983050, 47, 0, 983051, 47, 0, 983052, 47, 0, 983053, 47, 0, 983054, 47, 0, 983055, 47, 0, 983056, 47, 0, 983057, 47, 0, 983058, 47, 0, 983059, 47, 0, 983060, 47, 0, 983061, 47, 0, 983062, 47, 0, 983063, 47, 0, 983064, 47, 0, 983065, 47, 0, 983066, 47, 0, 983067, 47, 0, 983068, 47, 0, 983069, 47, 0, 1048576, 47, 0, 1048577, 47, 0, 1048578, 47, 0, 1048579, 47, 0, 1048580, 47, 0, 1048581, 47, 0, 1048582, 47, 0, 1048583, 21, 0, 1048584, 29, 0, 1048585, 36, 0, 1048586, 7, 0, 1048587, 47, 0, 1048588, 47, 0, 1048589, 47, 0, 1048590, 47, 0, 1048591, 47, 0, 1048592, 47, 0, 1048593, 47, 0, 1048594, 47, 0, 1048595, 47, 0, 1048596, 47, 0, 1048597, 47, 0, 1048598, 47, 0, 1048599, 47, 0, 1048600, 47, 0, 1048601, 47, 0, 1048602, 47, 0, 1048603, 47, 0, 1048604, 47, 0, 1048605, 47, 0 )
+
+[node name="WaterTiles" type="TileMap" parent="TileMaps"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196616, 6, 0, 196617, 7, 0, 196618, 7, 0, 196619, 7, 0, 196621, 7, 0, 196622, 7, 0, 196623, 7, 0, 196624, 7, 0, 196625, 8, 0, 262152, 14, 0, 262153, 15, 0, 262154, 15, 0, 262155, 15, 0, 262157, 15, 0, 262158, 15, 0, 262159, 15, 0, 262160, 15, 0, 262161, 37, 0, 262162, 8, 0, 327687, 6, 0, 327688, 38, 0, 327689, 15, 0, 327690, 15, 0, 327691, 29, 0, 327693, 23, 0, 327694, 30, 0, 327695, 15, 0, 327696, 15, 0, 327697, 15, 0, 327698, 16, 0, 393223, 14, 0, 393224, 15, 0, 393225, 15, 0, 393226, 15, 0, 393227, 16, 0, 393230, 14, 0, 393231, 15, 0, 393232, 15, 0, 393233, 15, 0, 393234, 37, 0, 393235, 8, 0, 458759, 14, 0, 458760, 15, 0, 458761, 15, 0, 458762, 15, 0, 458763, 16, 0, 458766, 14, 0, 458767, 15, 0, 458768, 15, 0, 458769, 15, 0, 458770, 15, 0, 458771, 16, 0, 524295, 14, 0, 524296, 15, 0, 524297, 15, 0, 524298, 15, 0, 524299, 37, 0, 524300, 7, 0, 524301, 7, 0, 524302, 38, 0, 524303, 15, 0, 524304, 15, 0, 524305, 15, 0, 524306, 15, 0, 524307, 16, 0, 589831, 14, 0, 589832, 15, 0, 589833, 15, 0, 589834, 15, 0, 589835, 15, 0, 589836, 15, 0, 589837, 15, 0, 589838, 15, 0, 589839, 15, 0, 589840, 15, 0, 589841, 15, 0, 589842, 29, 0, 589843, 24, 0, 655367, 22, 0, 655368, 30, 0, 655369, 15, 0, 655370, 15, 0, 655371, 15, 0, 655372, 15, 0, 655373, 15, 0, 655374, 15, 0, 655375, 15, 0, 655376, 15, 0, 655377, 15, 0, 655378, 16, 0, 720904, 14, 0, 720905, 15, 0, 720906, 15, 0, 720907, 15, 0, 720908, 15, 0, 720909, 15, 0, 720910, 15, 0, 720911, 15, 0, 720912, 15, 0, 720913, 29, 0, 720914, 24, 0, 786440, 22, 0, 786441, 30, 0, 786442, 15, 0, 786443, 15, 0, 786444, 15, 0, 786445, 15, 0, 786446, 15, 0, 786447, 15, 0, 786448, 15, 0, 786449, 16, 0, 851977, 22, 0, 851978, 23, 0, 851979, 23, 0, 851980, 30, 0, 851981, 29, 0, 851982, 23, 0, 851983, 23, 0, 851984, 23, 0, 851985, 24, 0, 917516, 14, 0, 917517, 16, 0, 983052, 14, 0, 983053, 16, 0, 1048588, 14, 0, 1048589, 16, 0 )
+
+[node name="RandomTiles" type="TileMap" parent="TileMaps"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 7, 0, 1, 5, 0, 2, 4, 0, 3, 5, 0, 4, 4, 0, 5, 5, 0, 6, 4, 0, 7, 5, 0, 8, 4, 0, 9, 5, 0, 10, 4, 0, 11, 5, 0, 12, 4, 0, 13, 5, 0, 14, 4, 0, 15, 5, 0, 16, 4, 0, 17, 5, 0, 18, 4, 0, 19, 5, 0, 20, 4, 0, 21, 5, 0, 22, 4, 0, 23, 5, 0, 24, 4, 0, 25, 5, 0, 26, 4, 0, 27, 5, 0, 28, 4, 0, 29, 6, 0, 65536, 3, 0, 65538, 17, 0, 65554, 17, 0, 65564, 16, 0, 65565, 2, 0, 131072, 3, 0, 131081, 18, 0, 131095, 20, 0, 131098, 18, 0, 131101, 2, 0, 196608, 3, 0, 196614, 19, 0, 196629, 19, 0, 196637, 2, 0, 262144, 3, 0, 262147, 18, 0, 262157, 27, 0, 262171, 20, 0, 262173, 2, 0, 327680, 3, 0, 327681, 15, 0, 327685, 25, 0, 327690, 28, 0, 327697, 26, 0, 327703, 18, 0, 327705, 19, 0, 327709, 2, 0, 393216, 3, 0, 393224, 26, 0, 393232, 28, 0, 393233, 26, 0, 393245, 2, 0, 458752, 3, 0, 458753, 11, 0, 458757, 19, 0, 458767, 26, 0, 458773, 25, 0, 458778, 14, 0, 458779, 13, 0, 458781, 2, 0, 524288, 3, 0, 524289, 12, 0, 524291, 20, 0, 524294, 23, 0, 524317, 2, 0, 589824, 3, 0, 589833, 27, 0, 589838, 27, 0, 589841, 27, 0, 589845, 18, 0, 589847, 24, 0, 589850, 25, 0, 589853, 2, 0, 655360, 3, 0, 655362, 18, 0, 655371, 26, 0, 655377, 26, 0, 655387, 18, 0, 655389, 2, 0, 720896, 3, 0, 720901, 29, 0, 720905, 26, 0, 720908, 27, 0, 720911, 28, 0, 720925, 2, 0, 786432, 3, 0, 786442, 28, 0, 786455, 19, 0, 786458, 20, 0, 786461, 2, 0, 851968, 3, 0, 851971, 24, 0, 851973, 29, 0, 851975, 19, 0, 851987, 9, 0, 851988, 10, 0, 851997, 2, 0, 917504, 3, 0, 917507, 9, 0, 917508, 10, 0, 917514, 23, 0, 917518, 23, 0, 917527, 23, 0, 917532, 15, 0, 917533, 2, 0, 983040, 3, 0, 983047, 29, 0, 983057, 25, 0, 983064, 18, 0, 983069, 2, 0, 1048576, 6, 0, 1048577, 1, 0, 1048578, 0, 0, 1048579, 1, 0, 1048580, 0, 0, 1048581, 1, 0, 1048585, 30, 0, 1048590, 0, 0, 1048591, 1, 0, 1048592, 0, 0, 1048593, 1, 0, 1048594, 0, 0, 1048595, 1, 0, 1048596, 0, 0, 1048597, 1, 0, 1048598, 0, 0, 1048599, 1, 0, 1048600, 0, 0, 1048601, 1, 0, 1048602, 0, 0, 1048603, 1, 0, 1048604, 0, 0, 1048605, 7, 0 )
+
+[node name="SpecialWater" type="Node2D" parent="."]
+
+[node name="WaterRock" type="Node2D" parent="SpecialWater"]
+
+[node name="WaterRock1" type="Node2D" parent="SpecialWater/WaterRock"]
+show_behind_parent = true
+position = Vector2( 384, 96 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="water" type="Sprite" parent="SpecialWater/WaterRock/WaterRock1"]
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 0, 32, 32 )
+
+[node name="rock" type="Sprite" parent="SpecialWater/WaterRock/WaterRock1"]
+texture = ExtResource( 10 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 256, 32, 32 )
+
+[node name="WaterRock2" type="Node2D" parent="SpecialWater/WaterRock"]
+show_behind_parent = true
+position = Vector2( 384, 128 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="water" type="Sprite" parent="SpecialWater/WaterRock/WaterRock2"]
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 32, 32, 32 )
+
+[node name="rock" type="Sprite" parent="SpecialWater/WaterRock/WaterRock2"]
+texture = ExtResource( 10 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 256, 32, 32 )
+
+[node name="WaterRock3" type="Node2D" parent="SpecialWater/WaterRock"]
+show_behind_parent = true
+position = Vector2( 384, 160 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="water" type="Sprite" parent="SpecialWater/WaterRock/WaterRock3"]
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 64, 32, 32 )
+
+[node name="rock" type="Sprite" parent="SpecialWater/WaterRock/WaterRock3"]
+texture = ExtResource( 10 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 256, 32, 32 )
+
+[node name="WaterNoRock" type="Node2D" parent="SpecialWater"]
+
+[node name="WaterNoRock1" type="StaticBody2D" parent="SpecialWater/WaterNoRock"]
+show_behind_parent = true
+position = Vector2( 384, 96 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="SpecialWater/WaterNoRock/WaterNoRock1"]
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 0, 32, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpecialWater/WaterNoRock/WaterNoRock1"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="SpecialWater/WaterNoRock/WaterNoRock1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpecialWater/WaterNoRock/WaterNoRock1/Area2D"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 3 )
+
+[node name="WaterNoRock2" type="StaticBody2D" parent="SpecialWater/WaterNoRock"]
+show_behind_parent = true
+position = Vector2( 384, 128 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="SpecialWater/WaterNoRock/WaterNoRock2"]
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 32, 32, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpecialWater/WaterNoRock/WaterNoRock2"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="SpecialWater/WaterNoRock/WaterNoRock2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpecialWater/WaterNoRock/WaterNoRock2/Area2D"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 3 )
+
+[node name="WaterNoRock3" type="StaticBody2D" parent="SpecialWater/WaterNoRock"]
+show_behind_parent = true
+position = Vector2( 384, 160 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="SpecialWater/WaterNoRock/WaterNoRock3"]
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 64, 32, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpecialWater/WaterNoRock/WaterNoRock3"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="SpecialWater/WaterNoRock/WaterNoRock3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpecialWater/WaterNoRock/WaterNoRock3/Area2D"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 3 )
+
+[node name="puzzleHint" type="Node2D" parent="."]
+visible = false
+position = Vector2( 384, 96 )
+script = ExtResource( 14 )
+
+[node name="rock1" type="Sprite" parent="puzzleHint"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+texture = ExtResource( 12 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 256, 32, 32 )
+
+[node name="rock2" type="Sprite" parent="puzzleHint"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 0, 32 )
+texture = ExtResource( 12 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 256, 32, 32 )
+
+[node name="rock3" type="Sprite" parent="puzzleHint"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 0, 64 )
+texture = ExtResource( 12 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 256, 32, 32 )
+
+[node name="MovableRocks" type="Node2D" parent="."]
+
+[node name="MovableRock1" parent="MovableRocks" instance=ExtResource( 9 )]
+position = Vector2( 86.273, 54 )
+
+[node name="MovableRock2" parent="MovableRocks" instance=ExtResource( 9 )]
+position = Vector2( 856, 451 )
+
+[node name="MovableRock3" parent="MovableRocks" instance=ExtResource( 9 )]
+position = Vector2( 853.356, 62.0923 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 272.43, 488.102 )
+collision_mask = 5
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 0, -5 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 540
+
+[node name="ToPreviousLevel" parent="." instance=ExtResource( 5 )]
+
+[node name="CollisionShape2D" parent="ToPreviousLevel" index="0"]
+shape = SubResource( 4 )
+
+[node name="Herb2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 400, 208 )
+type = 1
+
+[node name="Enemies" type="Node2D" parent="."]
+position = Vector2( 124.966, 200.5 )
+
+[node name="Devilb" parent="Enemies" instance=ExtResource( 16 )]
+position = Vector2( -68.466, -40.5 )
+
+[node name="Devilb6" parent="Enemies" instance=ExtResource( 16 )]
+position = Vector2( -53.466, 130.798 )
+
+[node name="Devilb2" parent="Enemies" instance=ExtResource( 16 )]
+position = Vector2( 0, -67.5 )
+
+[node name="Devilb4" parent="Enemies" instance=ExtResource( 16 )]
+position = Vector2( 52.917, -114.5 )
+
+[node name="Devilb5" parent="Enemies" instance=ExtResource( 16 )]
+position = Vector2( 333.617, -126.719 )
+
+[node name="Devilb3" parent="Enemies" instance=ExtResource( 16 )]
+position = Vector2( 652.034, 252.826 )
+
+[node name="HUD" parent="." instance=ExtResource( 7 )]
+
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+visible = false
+position = Vector2( 416, 192 )
+level_sceen = "res://Levels/BedChamber.tscn"
+
+[node name="Monster" parent="." instance=ExtResource( 17 )]
+position = Vector2( 809.651, 106.309 )
+
+[node name="Monster" parent="Monster" instance=ExtResource( 17 )]
+position = Vector2( 39.0108, 310.394 )
+
+[node name="Monster2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 843.662, 144 )
+
+[node name="Monster" parent="Monster2" instance=ExtResource( 17 )]
+position = Vector2( 39.0108, 310.394 )
+
+[node name="Monster4" parent="." instance=ExtResource( 17 )]
+position = Vector2( 913.62, 176 )
+
+[node name="Monster" parent="Monster4" instance=ExtResource( 17 )]
+position = Vector2( 39.0108, 310.394 )
+
+[node name="Monster3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 730.948, 270.607 )
+
+[node name="Monster" parent="Monster3" instance=ExtResource( 17 )]
+position = Vector2( 39.0108, 310.394 )
+[connection signal="body_entered" from="SpecialWater/WaterNoRock/WaterNoRock1/Area2D" to="SpecialWater/WaterNoRock/WaterNoRock1" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="SpecialWater/WaterNoRock/WaterNoRock2/Area2D" to="SpecialWater/WaterNoRock/WaterNoRock2" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="SpecialWater/WaterNoRock/WaterNoRock3/Area2D" to="SpecialWater/WaterNoRock/WaterNoRock3" method="_on_Area2D_body_entered"]
+[connection signal="herb_collected" from="Herb2" to="Portal" method="_on_Herb2_herb_collected"]
+[connection signal="herb_collected" from="Herb2" to="HUD" method="_on_Herb2_herb_collected"]
+
+[editable path="ToPreviousLevel"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/graveyard_loop.ogg-6aa445868090ecffe280f4a212a96ec4.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/graveyard_loop.ogg"
+dest_files=[ "res://.import/graveyard_loop.ogg-6aa445868090ecffe280f4a212a96ec4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

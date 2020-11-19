@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ghost-dance_loop.ogg-a018b5b2b7765ef97d230b73dbe57872.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/ghost-dance_loop.ogg"
+dest_files=[ "res://.import/ghost-dance_loop.ogg-a018b5b2b7765ef97d230b73dbe57872.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lever.wav-8c89d0ed3da99ff3b4ed7f3cd1f5e77a.sample"
+
+[deps]
+
+source_file="res://Music and SFX/lever.wav"
+dest_files=[ "res://.import/lever.wav-8c89d0ed3da99ff3b4ed7f3cd1f5e77a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

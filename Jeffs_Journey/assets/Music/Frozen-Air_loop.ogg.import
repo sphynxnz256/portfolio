@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Frozen-Air_loop.ogg-fb1aefe4a6bff389bcb58da170ae509d.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/Frozen-Air_loop.ogg"
+dest_files=[ "res://.import/Frozen-Air_loop.ogg-fb1aefe4a6bff389bcb58da170ae509d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

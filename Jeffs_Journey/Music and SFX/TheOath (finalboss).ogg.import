@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TheOath (finalboss).ogg-b1303126db54e0a951b2e197646deda4.oggstr"
+
+[deps]
+
+source_file="res://Music and SFX/TheOath (finalboss).ogg"
+dest_files=[ "res://.import/TheOath (finalboss).ogg-b1303126db54e0a951b2e197646deda4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

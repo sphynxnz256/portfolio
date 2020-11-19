@@ -1,0 +1,214 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/sprites/Herb2.png" type="Texture" id=1]
+[ext_resource path="res://UI/HUD.gd" type="Script" id=2]
+[ext_resource path="res://assets/status_bars/barHorizontal_green_mid 200.png" type="Texture" id=3]
+[ext_resource path="res://assets/status_bars/Border.png" type="Texture" id=4]
+[ext_resource path="res://assets/status_bars/barHorizontal_blue_mid 200_edited.png" type="Texture" id=5]
+[ext_resource path="res://assets/status_bars/barHorizontal_yellow_mid 200.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/Herb3.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/Herb1.png" type="Texture" id=8]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Bars" type="Node2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Label" type="Label" parent="Bars"]
+margin_left = 768.0
+margin_top = 13.3
+margin_right = 810.0
+margin_bottom = 27.3
+text = "Herbs:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerLevel" type="Label" parent="Bars"]
+margin_left = 32.0
+margin_top = 72.1847
+margin_right = 113.0
+margin_bottom = 86.1847
+text = "Player Level:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XPBar" type="Label" parent="Bars"]
+margin_left = 32.0
+margin_top = 51.4583
+margin_right = 72.0
+margin_bottom = 65.4583
+text = "XP: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XPBoarder" type="Sprite" parent="Bars"]
+position = Vector2( 87.5, 51.4583 )
+scale = Vector2( 0.3205, 0.3325 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="NodeXP" type="Node2D" parent="Bars"]
+position = Vector2( 88, 52 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="XPBar2" type="TextureProgress" parent="Bars/NodeXP"]
+margin_left = -1.52588e-05
+margin_top = -1.90735e-06
+margin_right = 200.0
+margin_bottom = 26.0
+texture_progress = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="Label" parent="Bars"]
+margin_left = 32.0
+margin_top = 14.0
+margin_right = 106.0
+margin_bottom = 28.0
+text = "Health: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBoarder" type="Sprite" parent="Bars"]
+position = Vector2( 87.5, 13.5 )
+scale = Vector2( 0.3205, 0.3325 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="NodeHealth" type="Node2D" parent="Bars"]
+position = Vector2( 88, 14 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="HealthBar2" type="TextureProgress" parent="Bars/NodeHealth"]
+margin_top = -1.90735e-06
+margin_right = 200.0
+margin_bottom = 26.0
+texture_progress = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ManaBar" type="Label" parent="Bars"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 106.0
+margin_bottom = 46.0
+text = "Mana:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ManaBoarder" type="Sprite" parent="Bars"]
+position = Vector2( 87.5, 32 )
+scale = Vector2( 0.3205, 0.3325 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="NodeMana" type="Node2D" parent="Bars"]
+position = Vector2( 88, 31.9 )
+scale = Vector2( 0.505, 0.506 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ManaBar2" type="TextureProgress" parent="Bars/NodeMana"]
+margin_right = 201.0
+margin_bottom = 27.0
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BarValues" type="Node2D" parent="Bars"]
+position = Vector2( 72, 0 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="health_value" type="Label" parent="Bars/BarValues"]
+margin_left = 168.0
+margin_top = 19.0
+margin_right = 311.0
+margin_bottom = 40.0
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mana_value" type="Label" parent="Bars/BarValues"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 310.0
+margin_bottom = 66.0
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="xp_value" type="Label" parent="Bars/BarValues"]
+margin_left = 168.0
+margin_top = 74.2857
+margin_right = 310.0
+margin_bottom = 93.2857
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Herbs" type="Node2D" parent="."]
+
+[node name="Herb1" type="Sprite" parent="Herbs"]
+position = Vector2( 384, 14 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Herb2" type="Sprite" parent="Herbs"]
+position = Vector2( 416, 14 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Herb3" type="Sprite" parent="Herbs"]
+position = Vector2( 448, 14 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="LevelUpMessage" type="Label" parent="."]
+visible = false
+margin_left = 205.905
+margin_top = 152.438
+margin_right = 308.905
+margin_bottom = 166.438
+text = "You Leveled Up!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelUpTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="NoManaMessage" type="Label" parent="."]
+visible = false
+margin_left = 202.492
+margin_top = 166.438
+margin_right = 313.492
+margin_bottom = 180.438
+text = "Not Enough Mana"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoManaTimer" type="Timer" parent="."]
+[connection signal="timeout" from="LevelUpTimer" to="." method="_on_LevelUpTimer_timeout"]
+[connection signal="timeout" from="NoManaTimer" to="." method="_on_NoManaTimer_timeout"]

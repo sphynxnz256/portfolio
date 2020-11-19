@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wild-road_loop.ogg-443a40e2cd4bd552ede20830e9901c69.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/wild-road_loop.ogg"
+dest_files=[ "res://.import/wild-road_loop.ogg-443a40e2cd4bd552ede20830e9901c69.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

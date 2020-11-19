@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Illusion-Field_loop.ogg-77326864bd5ff9dfe094a771edc7d934.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/Illusion-Field_loop.ogg"
+dest_files=[ "res://.import/Illusion-Field_loop.ogg-77326864bd5ff9dfe094a771edc7d934.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,164 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Cave levels/Walls.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileSets/TownHouseTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://assets/sprites/Female/Female 06-1.png" type="Texture" id=4]
+[ext_resource path="res://assets/tilesets/[Base]BaseChip_pipo.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/Female/Female 14-4.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/Male/Male 07-1.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/Female/Female 14-2.png" type="Texture" id=8]
+[ext_resource path="res://Levels/DialogDetection.gd" type="Script" id=9]
+[ext_resource path="res://storyline/StoryBox.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 32.0
+height = 64.0
+
+[node name="BedChamber" type="Node2D"]
+
+[node name="MainTileset" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -262144, 46, 0, -262143, 46, 0, -262142, 46, 0, -262141, 46, 0, -262140, 46, 0, -262139, 46, 0, -262138, 46, 0, -262137, 46, 0, -262136, 46, 0, -262135, 46, 0, -262134, 46, 0, -262133, 46, 0, -196608, 46, 0, -196607, 46, 0, -196606, 46, 0, -196605, 46, 0, -196604, 46, 0, -196603, 46, 0, -196602, 46, 0, -196601, 46, 0, -196600, 46, 0, -196599, 46, 0, -196598, 46, 0, -196597, 46, 0, -131072, 46, 0, -131071, 46, 0, -131070, 46, 0, -131069, 46, 0, -131068, 46, 0, -131067, 46, 0, -131066, 46, 0, -131065, 46, 0, -131064, 46, 0, -131063, 46, 0, -131062, 46, 0, -131061, 46, 0, -65536, 47, 0, -65535, 47, 0, -65534, 47, 0, -65533, 47, 0, -65532, 47, 0, -65531, 47, 0, -65530, 47, 0, -65529, 47, 0, -65528, 47, 0, -65527, 47, 0, -65526, 47, 0, -65525, 47, 0, 0, 4, 0, 1, 3, 0, 2, 4, 0, 3, 3, 0, 4, 4, 0, 5, 3, 0, 6, 4, 0, 7, 3, 0, 8, 4, 0, 9, 3, 0, 10, 4, 0, 11, 3, 0, 65536, 3, 0, 65537, 4, 0, 65538, 3, 0, 65539, 4, 0, 65540, 3, 0, 65541, 4, 0, 65542, 3, 0, 65543, 4, 0, 65544, 3, 0, 65545, 4, 0, 65546, 3, 0, 65547, 4, 0, 131072, 4, 0, 131073, 3, 0, 131074, 4, 0, 131075, 3, 0, 131076, 4, 0, 131077, 3, 0, 131078, 4, 0, 131079, 3, 0, 131080, 4, 0, 131081, 3, 0, 131082, 4, 0, 131083, 3, 0, 196608, 3, 0, 196609, 4, 0, 196610, 3, 0, 196611, 4, 0, 196612, 3, 0, 196613, 4, 0, 196614, 3, 0, 196615, 4, 0, 196616, 3, 0, 196617, 4, 0, 196618, 3, 0, 196619, 4, 0, 262144, 4, 0, 262145, 3, 0, 262146, 4, 0, 262147, 3, 0, 262148, 4, 0, 262149, 3, 0, 262150, 4, 0, 262151, 3, 0, 262152, 4, 0, 262153, 3, 0, 262154, 4, 0, 262155, 3, 0, 327680, 3, 0, 327681, 4, 0, 327682, 3, 0, 327683, 4, 0, 327684, 3, 0, 327685, 4, 0, 327686, 3, 0, 327687, 4, 0, 327688, 3, 0, 327689, 4, 0, 327690, 3, 0, 327691, 4, 0, 393216, 4, 0, 393217, 3, 0, 393218, 4, 0, 393219, 3, 0, 393220, 4, 0, 393221, 3, 0, 393222, 4, 0, 393223, 3, 0, 393224, 4, 0, 393225, 3, 0, 393226, 4, 0, 393227, 3, 0, 458752, 3, 0, 458753, 4, 0, 458754, 3, 0, 458755, 4, 0, 458756, 3, 0, 458757, 4, 0, 458758, 3, 0, 458759, 4, 0, 458760, 3, 0, 458761, 4, 0, 458762, 3, 0, 458763, 4, 0 )
+
+[node name="SideWalls" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -196612, 0, 5, -196611, 0, 6, -196610, 0, 6, -196609, 0, 7, -262132, 0, 5, -262131, 0, 6, -262130, 0, 6, -262129, 0, 7, -131076, 0, 65541, -131075, 0, 65542, -131074, 0, 65542, -131073, 0, 65543, -196596, 0, 65541, -196595, 0, 65542, -196594, 0, 65542, -196593, 0, 65543, -65540, 0, 65541, -65539, 0, 65542, -65538, 0, 65542, -65537, 0, 65543, -131060, 0, 65541, -131059, 0, 65542, -131058, 0, 65542, -131057, 0, 65543, -4, 0, 65541, -3, 0, 65542, -2, 0, 65542, -1, 0, 65543, -65524, 0, 65541, -65523, 0, 65542, -65522, 0, 65542, -65521, 0, 65543, 65532, 0, 65541, 65533, 0, 65542, 65534, 0, 65542, 65535, 0, 65543, 12, 0, 65541, 13, 0, 65542, 14, 0, 65542, 15, 0, 65543, 131068, 0, 65541, 131069, 0, 65542, 131070, 0, 65542, 131071, 0, 65543, 65548, 0, 65541, 65549, 0, 65542, 65550, 0, 65542, 65551, 0, 65543, 196604, 0, 65541, 196605, 0, 65542, 196606, 0, 65542, 196607, 0, 65543, 131084, 0, 65541, 131085, 0, 65542, 131086, 0, 65542, 131087, 0, 65543, 262140, 0, 65541, 262141, 0, 65542, 262142, 0, 65542, 262143, 0, 65543, 196620, 0, 65541, 196621, 0, 65542, 196622, 0, 65542, 196623, 0, 65543, 327676, 0, 65541, 327677, 0, 65542, 327678, 0, 65542, 327679, 0, 65543, 262156, 0, 65541, 262157, 0, 65542, 262158, 0, 65542, 262159, 0, 65543, 393212, 0, 65541, 393213, 0, 65542, 393214, 0, 65542, 393215, 0, 65543, 327692, 0, 65541, 327693, 0, 65542, 327694, 0, 65542, 327695, 0, 65543, 458748, 0, 65541, 458749, 0, 65542, 458750, 0, 65542, 458751, 0, 65543, 393228, 0, 65541, 393229, 0, 65542, 393230, 0, 65542, 393231, 0, 65543, 524284, 0, 65541, 524285, 0, 65542, 524286, 0, 65542, 524287, 0, 65543, 458764, 0, 65541, 458765, 0, 65542, 458766, 0, 65542, 458767, 0, 65543, 589820, 0, 65541, 589821, 0, 65542, 589822, 0, 65542, 589823, 0, 262148, 524288, 0, 6, 524289, 0, 6, 524290, 0, 6, 524291, 0, 6, 524292, 0, 6, 524293, 0, 6, 524294, 0, 6, 524295, 0, 6, 524296, 0, 6, 524297, 0, 6, 524298, 0, 6, 524299, 0, 6, 524300, 0, 262149, 524301, 0, 65542, 524302, 0, 65542, 524303, 0, 65543, 655356, 0, 65541, 655357, 0, 65542, 655358, 0, 65542, 655359, 0, 65542, 589824, 0, 65542, 589825, 0, 65542, 589826, 0, 65542, 589827, 0, 65542, 589828, 0, 65542, 589829, 0, 65542, 589830, 0, 65542, 589831, 0, 65542, 589832, 0, 65542, 589833, 0, 65542, 589834, 0, 65542, 589835, 0, 65542, 589836, 0, 65542, 589837, 0, 65542, 589838, 0, 65542, 589839, 0, 65543, 720892, 0, 65541, 720893, 0, 65542, 720894, 0, 65542, 720895, 0, 65542, 655360, 0, 65542, 655361, 0, 65542, 655362, 0, 65542, 655363, 0, 65542, 655364, 0, 65542, 655365, 0, 65542, 655366, 0, 65542, 655367, 0, 65542, 655368, 0, 65542, 655369, 0, 65542, 655370, 0, 65542, 655371, 0, 65542, 655372, 0, 65542, 655373, 0, 65542, 655374, 0, 65542, 655375, 0, 65543, 786428, 0, 131077, 786429, 0, 131078, 786430, 0, 131078, 786431, 0, 131078, 720896, 0, 131078, 720897, 0, 131078, 720898, 0, 131078, 720899, 0, 131078, 720900, 0, 131078, 720901, 0, 131078, 720902, 0, 131078, 720903, 0, 131078, 720904, 0, 131078, 720905, 0, 131078, 720906, 0, 131078, 720907, 0, 131078, 720908, 0, 131078, 720909, 0, 131078, 720910, 0, 131078, 720911, 0, 131079 )
+
+[node name="WallObjects" type="Node2D" parent="."]
+
+[node name="Banner01" type="Sprite" parent="WallObjects"]
+position = Vector2( 48, -80 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 3296, 32, 64 )
+
+[node name="Banner02" type="Sprite" parent="WallObjects"]
+position = Vector2( 336, -80 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 3296, 32, 64 )
+
+[node name="Banner03" type="Sprite" parent="WallObjects"]
+position = Vector2( 112, -80 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 3296, 32, 64 )
+
+[node name="Banner04" type="Sprite" parent="WallObjects"]
+position = Vector2( 272, -80 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 3296, 32, 64 )
+
+[node name="Nurse01" type="Sprite" parent="."]
+position = Vector2( 240, 0 )
+texture = ExtResource( 6 )
+vframes = 4
+hframes = 3
+frame = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Nurse01"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nurse01/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Nurse02" type="Sprite" parent="."]
+position = Vector2( 144, 16 )
+texture = ExtResource( 8 )
+vframes = 4
+hframes = 3
+frame = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Nurse02"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nurse02/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="QueenBed" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bed01" type="Sprite" parent="QueenBed"]
+position = Vector2( 192, 16 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 96, 3104, 64, 64 )
+
+[node name="Queen" type="Sprite" parent="QueenBed"]
+position = Vector2( 192, 7 )
+texture = ExtResource( 4 )
+vframes = 4
+hframes = 3
+
+[node name="Bed02" type="Sprite" parent="QueenBed"]
+position = Vector2( 192, 16 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 96, 3168, 64, 64 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="QueenBed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QueenBed/StaticBody2D"]
+position = Vector2( 192, 16 )
+shape = SubResource( 2 )
+
+[node name="OldManJenkins" type="Sprite" parent="."]
+position = Vector2( 192, 56 )
+texture = ExtResource( 7 )
+vframes = 4
+hframes = 3
+frame = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="OldManJenkins"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OldManJenkins/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="DialogDetection" type="Area2D" parent="OldManJenkins"]
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OldManJenkins/DialogDetection"]
+position = Vector2( 0, 24 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 240 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = -128
+limit_top = -128
+limit_right = 512
+limit_bottom = 384
+
+[node name="HUD" parent="." instance=ExtResource( 11 )]
+
+[node name="StoryBox" parent="HUD" instance=ExtResource( 10 )]
+visible = false
+margin_left = 48.0
+margin_top = 40.0
+margin_right = -48.0
+margin_bottom = -38.0

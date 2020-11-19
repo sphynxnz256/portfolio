@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Never-Surrender_loop.ogg-fe76a32e5a6f02798ab3ccd320c1b769.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/Never-Surrender_loop.ogg"
+dest_files=[ "res://.import/Never-Surrender_loop.ogg-fe76a32e5a6f02798ab3ccd320c1b769.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

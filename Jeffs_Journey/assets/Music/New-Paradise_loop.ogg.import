@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/New-Paradise_loop.ogg-e65a6bd84d2130c8b11d6d6c118d33af.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/New-Paradise_loop.ogg"
+dest_files=[ "res://.import/New-Paradise_loop.ogg-e65a6bd84d2130c8b11d6d6c118d33af.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

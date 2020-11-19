@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Conquest_loop.ogg-19fcac8ffec17884363eb5281fc394af.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/Conquest_loop.ogg"
+dest_files=[ "res://.import/Conquest_loop.ogg-19fcac8ffec17884363eb5281fc394af.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

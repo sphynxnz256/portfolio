@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://MenuScenes/StartGame.gd" type="Script" id=1]
+[ext_resource path="res://MenuScenes/AboutUs.gd" type="Script" id=2]
+[ext_resource path="res://MenuScenes/TitleScreen.gd" type="Script" id=5]
+[ext_resource path="res://assets/Menu2.jpg" type="Texture" id=6]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.38, 0.38 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="StartGame" type="Button" parent="."]
+margin_left = 202.0
+margin_top = 161.56
+margin_right = 298.0
+margin_bottom = 181.56
+text = "Start Game"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+level_sceen = "res://Levels/BedChamber.tscn"
+
+[node name="AboutUs" type="Button" parent="."]
+margin_left = 202.0
+margin_top = 191.617
+margin_right = 298.0
+margin_bottom = 211.617
+text = "About Us"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+level_sceen = "res://MenuScenes/AboutUsScene.tscn"

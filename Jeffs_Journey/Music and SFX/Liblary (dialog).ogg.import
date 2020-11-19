@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Liblary (dialog).ogg-414e4e4a2d1d5f5d8c40cc16d55c8432.oggstr"
+
+[deps]
+
+source_file="res://Music and SFX/Liblary (dialog).ogg"
+dest_files=[ "res://.import/Liblary (dialog).ogg-414e4e4a2d1d5f5d8c40cc16d55c8432.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

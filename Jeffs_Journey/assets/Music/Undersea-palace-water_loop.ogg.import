@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Undersea-palace-water_loop.ogg-01b72e02394139f4ed08e5978915541c.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/Undersea-palace-water_loop.ogg"
+dest_files=[ "res://.import/Undersea-palace-water_loop.ogg-01b72e02394139f4ed08e5978915541c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
